@@ -2,6 +2,11 @@
 Problem: What is the largest prime factor of the number 600851475143 ?
 """
 
+
+def main():
+    print(find_largest_prime_factor_for_odd_number(600851475143))
+
+
 def find_largest_prime_factor_for_odd_number(n):
     """
     Proof/explaination of algo: Every integer can be written as n = p1^x1 * p2^x2 * ... * pn^xn, where pk is the kth prime.
@@ -27,4 +32,4 @@ assert find_largest_prime_factor_for_odd_number(33) == 11
 # This test is really the inspiration for the solution.
 assert find_largest_prime_factor_for_odd_number(13*13*13*17) == 17
 
-print(find_largest_prime_factor_for_odd_number(600851475143))
+main()

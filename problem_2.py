@@ -2,15 +2,8 @@
 Problem: By considering the terms in the Fibonacci sequence whose values do not exceed four million, 
 find the sum of the even-valued terms.
 """
-
-def fib():
-    yield 1
-    yield 2
-    first = 1
-    second = 2
-    while True:
-        yield first + second
-        first, second = second, first + second
+def main():
+    print(sum_even_fib_less_than_4mil())
 
 def sum_even_fib_less_than_4mil():
     fib_gen = fib()
@@ -22,4 +15,14 @@ def sum_even_fib_less_than_4mil():
         cur_fib = next(fib_gen)
     return result
 
-print(sum_even_fib_less_than_4mil())
+
+def fib():
+    yield 1
+    yield 2
+    first = 1
+    second = 2
+    while True:
+        yield first + second
+        first, second = second, first + second
+
+main()
