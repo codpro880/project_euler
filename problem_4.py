@@ -1,4 +1,6 @@
-""" Find the largest palindrome made from the product of two three digit numbers """
+"""
+Problem: Find the largest palindrome made from the product of two three digit numbers.
+"""
 def is_palindrome(x):
     return str(x) == str(x)[::-1]
 
