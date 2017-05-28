@@ -3,6 +3,9 @@ import math
 def find_nth_prime(n):
     return _generate_primes(n, len, -1)
 
+def first_n_primes(n):
+    return _generate_primes(n, len, slice(0, -1))
+
 def primes_less_than(n):
     return _generate_primes(n, lambda x: x[-1], slice(0,-1))
 
